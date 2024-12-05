@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Pose Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Pose Tracker</h1>
+    <div>
+        <button onclick="window.location.href='/start';">Start Feed</button>
+        <button onclick="window.location.href='/stop';">Stop Feed</button>
+    </div>
+    <div>
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    <div class="info">
+        <p>Reps: {{ counter }}</p>
+        <p>Stage: {{ stage }}</p>
+    </div>
+</body>
+</html>
